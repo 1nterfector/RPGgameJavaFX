@@ -49,6 +49,12 @@
     -fx-border-radius: 20;
     -fx-border-color: black;
 }
+.list-view {
+    -fx-background-color: transparent;
+}
+.list-view .cell{
+    -fx-background-color: transparent;
+}
 
 
 

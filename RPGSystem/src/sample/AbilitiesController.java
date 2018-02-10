@@ -1,12 +1,11 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.Tooltip;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -30,10 +29,13 @@ public class AbilitiesController {
     @FXML
     private GridPane grid;
     @FXML
+    private ListView<ToggleButton> listView;
+    @FXML
     private Button goBack;
     @FXML
     private GridPane chosenGrid;
     private int iterator = 0;
+    private ObservableList<ToggleButton> abilityButtonsList;
 
     private ClassAbilities classAbilities;
     private Ability[] chosenAbilities;
@@ -43,6 +45,7 @@ public class AbilitiesController {
     public void initialize() {
         listOfButtons = new ArrayList<>();
         chosenButtons = new ArrayList<>();
+        abilityButtonsList = FXCollections.observableArrayList();
 
         classAbilities = hero.getHeroClass().getClassAbilities();
         chosenAbilities = hero.getHeroClass().getChosenAbilities();
@@ -53,7 +56,7 @@ public class AbilitiesController {
         heroRace.setText(hero.getRace().toString());
         heroClass.setText(hero.getHeroClass().toString());
         insertImages();
-
+        listView.setItems(abilityButtonsList);
 
 
 
@@ -79,15 +82,12 @@ public class AbilitiesController {
                         if (iterator == 4) {
                             something();
                         }
-                        iterator = GridPane.getColumnIndex(newButton);
-                        chosenGrid.getChildren().remove(newButton);
-                        if (iterator != 4) {
-                            GridPane
-                        }
+                        abilityButtonsList.remove(newButton);
                         button.setDisable(false);
+                        iterator--;
                     });
                     chosenButtons.add(button);
-                    chosenGrid.add(newButton, iterator, 0);
+                    abilityButtonsList.add(newButton);
                     iterator++;
                     disableAll();
                 }
@@ -100,6 +100,7 @@ public class AbilitiesController {
                 column = 0;
             }
         }
+
 
 
     }
