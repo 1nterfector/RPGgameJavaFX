@@ -1,0 +1,25 @@
+.label{
+    -fx-font-size: 30;
+    -fx-font-family: 'Rubik Mono One';
+    -fx-text-fill: #edeee9;
+    -fx-effect: dropshadow(gaussian , black, 30, 0.0, 0, 20);
+}
+.button {
+    -fx-font-size: 26;
+    -fx-font-family: 'Rubik Mono One';
+    -fx-background-color: rgba(25, 25, 25, 0.4);
+    -fx-text-fill: #c9cac5;
+    -fx-background-radius: 40px;
+    -fx-effect: dropshadow(gaussian , black, 30, 0.0, 0, 20);
+}
+.button:hover {
+    -fx-text-fill: #e9e9e3;
+}
+.pane {
+    -fx-background-image: url("image/background/menu_theme.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+}
+
+
+
