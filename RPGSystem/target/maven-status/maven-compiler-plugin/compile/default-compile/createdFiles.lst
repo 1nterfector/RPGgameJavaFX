@@ -1,0 +1,15 @@
+game/Controller.class
+game/AbilitiesScene.class
+game/logic/Picture.class
+game/logic/Hero.class
+game/logic/Statistics.class
+game/logic/ClassAbilities.class
+game/AbilitiesController.class
+game/Main.class
+game/logic/AbilityImage.class
+game/NewGameScene.class
+game/logic/HeroClass.class
+game/logic/Description.class
+game/NewGameController.class
+game/logic/Ability.class
+game/logic/Race.class

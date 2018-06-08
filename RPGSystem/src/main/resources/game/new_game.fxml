@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane styleClass="pane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.NewGameController">
+   <center>
+      <AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="pane" stylesheets="@new_game_style.css">
+         <children>
+            <Label layoutX="40.0" layoutY="71.0" text="Character name" AnchorPane.leftAnchor="40.0" />
+            <TextField fx:id="nameField" layoutX="40.0" layoutY="92.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="40.0" />
+            <Label layoutX="42.0" layoutY="141.0" text="Race" AnchorPane.leftAnchor="42.0" />
+            <Label layoutX="40.0" layoutY="214.0" text="Class" AnchorPane.leftAnchor="40.0" />
+            <Button fx:id="confirmCreation" layoutX="953.0" layoutY="733.0" mnemonicParsing="false" onAction="#createHero" prefHeight="39.0" prefWidth="200.0" text="Create a Hero!" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="47.0" />
+            <ComboBox fx:id="raceComboBox" layoutX="40.0" layoutY="162.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="40.0" />
+            <ComboBox fx:id="heroClassComboBox" layoutX="41.0" layoutY="235.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="41.0" />
+      
+            <StackPane layoutX="300.0" layoutY="70.0" styleClass="imageView">
+               <ImageView fx:id="racePicture" fitHeight="266.0" fitWidth="328.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+
+            </image>
+               </ImageView>
+               <ImageView fx:id="classPicture" fitHeight="71.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_RIGHT" />
+            </StackPane>
+            <Button fx:id="backToMenu" layoutX="32.0" layoutY="733.0" mnemonicParsing="false" onAction="#mainMenuReturn" prefHeight="39.0" prefWidth="217.0" text="Back to menu" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="32.0" />
+            <TextArea fx:id="description" layoutX="34.0" layoutY="366.0" prefHeight="285.0" prefWidth="858.0" wrapText="true" AnchorPane.leftAnchor="34.0" />
+            <AnchorPane layoutX="636.0" layoutY="72.0" prefHeight="271.0" prefWidth="256.0" styleClass="statistics" AnchorPane.topAnchor="72.0">
+               <children>
+                  <TextField fx:id="strengthStat" layoutX="159.0" layoutY="33.0" prefWidth="70.0" />
+                  <Label layoutX="27.0" layoutY="33.0" text="Strength" />
+                  <TextField fx:id="intellectStat" layoutX="159.0" layoutY="63.0" prefWidth="70.0" />
+                  <Label layoutX="27.0" layoutY="63.0" text="Intellect" />
+                  <TextField fx:id="dexterityStat" layoutX="159.0" layoutY="93.0" prefWidth="70.0" />
+                  <Label layoutX="27.0" layoutY="93.0" text="Dexterity" />
+                  <TextField fx:id="staminaStat" layoutX="159.0" layoutY="123.0" prefWidth="70.0" />
+                  <Label layoutX="27.0" layoutY="123.0" text="Stamina" />
+                  <TextField fx:id="healthStat" layoutX="159.0" layoutY="153.0" prefWidth="70.0" />
+                  <Label layoutX="27.0" layoutY="153.0" text="Health" />
+                  <TextField fx:id="wisdomStat" layoutX="159.0" layoutY="183.0" prefWidth="70.0" />
+                  <Label layoutX="27.0" layoutY="183.0" text="Wisdom" />
+                  <TextField fx:id="luckStat" layoutX="159.0" layoutY="213.0" prefWidth="70.0" />
+                  <Label layoutX="27.0" layoutY="213.0" text="Luck" />
+               </children>
+            </AnchorPane>
+            <TextArea fx:id="classDesc" layoutX="904.0" layoutY="70.0" prefHeight="581.0" prefWidth="272.0" wrapText="true" AnchorPane.leftAnchor="904.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="70.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
